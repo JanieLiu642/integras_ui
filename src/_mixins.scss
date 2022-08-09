@@ -1,0 +1,28 @@
+@mixin icon-size {
+  .icon-lg {
+    font-size:32px;
+  }
+  .icon-md {
+    font-size:22px;
+  }
+  .icon-sm {
+    font-size:18px;
+  }
+}
+
+@mixin value-pair {
+  .mat-icon {
+    width:auto;
+    height:auto;
+    margin-right:6px;
+  }
+  .lv-label {
+    font-size:85%;
+    margin-bottom:0;
+    white-space:nowrap;
+    opacity:0.85;
+  }
+  .lv-value {
+    font-weight:500;
+  }
+}

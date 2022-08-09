@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+//@import "@angular/material/prebuilt-themes/indigo-pink.css";
+@use "@angular/material" as mat;
+@include mat.core();
+$primary-text: white;
+$primary-dark-text: rgba(black, 0.9);
+$mat-primary: (
+  100: #546E7A,
+  500: #546E7A,
+  700: #546E7A, contrast: (500: $primary-text)
+);
+$mat-accent: (
+  100: #BCAAA4,
+  500: #BCAAA4,
+  700: #BCAAA4, contrast: (500: $primary-text)
+);
+$mat-dark-accent: (
+  100: #FFEB3B,
+  500: #FFEB3B,
+  700: #FFEB3B, contrast: (500: $primary-dark-text)
+);
+$mat-warning: (
+  100: #D32F2F,
+  500: #D32F2F,
+  700: #D32F2F, contrast: (500: $primary-text)
+);
+$app-primary: mat.define-palette($mat-primary);
+$app-accent: mat.define-palette($mat-accent);
+$app-warning: mat.define-palette($mat-warning);
+$app-theme: mat.define-light-theme($app-primary, $app-accent, $app-warning);
+@include mat.all-component-themes($app-theme);
+.dark-theme {
+  $app-dark-accent: mat.define-palette($mat-dark-accent);
+  $app-theme-dark: mat.define-dark-theme($app-primary, $app-dark-accent, $app-warning);
+  @include mat.all-component-themes($app-theme-dark);
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
+  background-color: #E8F0F1;
+}
+:root {
+  --primary: #546E7A;
+  --accent: #BCAAA4;
+  --warning: #D32F2F;
+  --light-border: rgba(black, 0.2);
+}
+.mat-button {
+  font:400 12px/20px;
+  padding:0 16px;
+  white-space:nowrap;
+}
+
+
+

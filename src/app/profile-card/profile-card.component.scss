@@ -1,0 +1,93 @@
+@import "../../mixins";
+
+@include icon-size();
+@include value-pair();
+
+.mat-card {
+  width: 320px;
+  margin: 40px;
+  border-radius: 8px;
+  padding: 20px 0;
+
+  mat-card-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom:20px;
+  }
+  .mat-card-header {
+    display:block;
+    border-left: 6px solid var(--primary);
+    padding: 8px 25px;
+  }
+}
+
+.title-block {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+
+  .title {
+    display: flex;
+
+    .lv-value {
+      margin-bottom: 0;
+    }
+  }
+}
+.mat-mini-button {
+  font-size:85%;
+  height:18px;
+  padding:0 10px;
+  margin:0 8px;
+  white-space:nowrap;
+  opacity:0.75;
+  outline:0;
+  border:1px solid rgba(black, 0.5);
+  border-radius:10px;
+}
+.avatar {
+  background-color: #F8EACD;
+  color: #7A5917;
+  font-size: 18px;
+  font-weight: 600;
+  clip-path: circle();
+  padding: 10px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+section {
+  padding: 0 10px 0 30px;
+  position:relative;
+
+  mat-icon {
+    position:absolute;
+    top:0;
+    left:5px;
+    opacity: 0.75;
+  }
+}
+
+.name-value-block {
+  margin: 20px 25px;
+}
+
+.location {
+  border-bottom: 1px solid rgba(black, 0.2);
+}
+
+.person {
+  display: flex;
+  justify-content: center;
+
+  section {
+    width: 50%;
+  }
+
+  section:nth-child(1) {
+    border-right: 1px solid rgba(black, 0.2);
+    margin-right: 0;
+  }
+}
+
